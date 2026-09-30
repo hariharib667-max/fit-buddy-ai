@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuddy AI Fitness Planner</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏋️ FitBuddy AI</h1>
+        <p>Your Personal AI Fitness Assistant</p>
+
+        <form id="fitnessForm">
+
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Age</label>
+            <input type="number" id="age" min="13" max="100" required>
+
+            <label>Weight (kg)</label>
+            <input type="number" id="weight" min="1" step="0.1" required>
+
+            <label>Height (cm)</label>
+            <input type="number" id="height" min="50" max="250" required>
+
+            <label>Fitness Goal</label>
+            <select id="goal">
+                <option>Weight Loss</option>
+                <option>Muscle Gain</option>
+                <option>General Fitness</option>
+                <option>Improve Stamina</option>
+            </select>
+
+            <label>Fitness Level</label>
+            <select id="level">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+
+            <label>Diet Preference</label>
+            <select id="diet">
+                <option>Vegetarian</option>
+                <option>Non-Vegetarian</option>
+                <option>Vegan</option>
+            </select>
+
+            <button type="submit" id="generateBtn">
+                Generate My Fitness Plan ✨
+            </button>
+        </form>
+
+        <div id="loading" hidden>
+            Generating your AI fitness plan...
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <p class="note">
+            AI-generated guidance is educational, not medical advice.
+        </p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
